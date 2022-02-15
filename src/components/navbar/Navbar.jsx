@@ -1,14 +1,22 @@
 import React from 'react'
-import { Navbar, Nav, Container, Button, NavDropdown } from 'react-bootstrap'
+import { Navbar, Nav, Container, Button } from 'react-bootstrap'
 import '../../index.css'
 
 const Header = () => {
   return (
     <header>
       <>
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="light" expand="lg" fixed="top">
           <Container fluid>
-            <Navbar.Brand href="#">Travel</Navbar.Brand>
+            <Navbar.Brand href="#travel">
+              <img
+                src="/images/element2.png"
+                alt="element-2"
+                width="30"
+                height="30"
+                className="d-inline-block align-top ml-5"
+              />
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
               <Nav
@@ -22,10 +30,10 @@ const Header = () => {
                 <Nav.Link href="#partner">Partner</Nav.Link>
               </Nav>
               <Nav>
-                <Button id="btn-login" className="m-1">
+                <Button id="btn-login" className="m-1 text-capitalize">
                   Search
                 </Button>
-                <Button id="btn-register" className="m-1">
+                <Button id="btn-register" className="m-1 text-capitalize">
                   Register
                 </Button>
               </Nav>
